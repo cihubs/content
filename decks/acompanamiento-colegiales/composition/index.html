@@ -68,7 +68,7 @@
         text-transform: uppercase;
         color: #4a6fa5;
       }
-      .slide-dark .kicker { color: #fec503; }
+      .slide-dark .kicker { color: #7ba3d6; }
       .headline {
         font-family: "Poppins", sans-serif;
         font-weight: 700;
@@ -85,7 +85,8 @@
         margin-top: 36px;
         max-width: 1500px;
       }
-      .accent { color: #fec503; }
+      .accent { color: #4a6fa5; }
+      .slide-dark .accent { color: #7ba3d6; }
       .light { color: #4a6fa5; }
       .brand-logo {
         position: absolute;
@@ -111,7 +112,7 @@
         top: 0;
         width: 28px;
         height: 1080px;
-        background: #fec503;
+        background: #4a6fa5;
       }
       .watermark {
         position: absolute;
@@ -122,11 +123,11 @@
         opacity: 0.12;
         pointer-events: none;
       }
-      #ruta-s2, #ruta-s3, #acomp-s2, #acomp-s3 { opacity: 0; }
+      #ruta-s2, #ruta-s3 { opacity: 0; }
       .steps { display: flex; gap: 48px; margin-top: 56px; }
       .step {
         flex: 1;
-        border-top: 10px solid #fec503;
+        border-top: 10px solid #4a6fa5;
         padding-top: 28px;
       }
       .mgrid {
@@ -135,17 +136,33 @@
         gap: 20px;
         margin-top: 48px;
       }
-      .mgroup {
-        display: grid;
-        grid-template-columns: subgrid;
+      .mcall {
+        background: #2a4289;
+        border-radius: 12px;
+        border-top: 8px solid #4a6fa5;
+        padding: 22px 16px;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.3;
+        color: #ffffff;
+        text-wrap: pretty;
       }
-      #acomp-s1 { grid-column: span 2; }
-      #acomp-s2 { grid-column: span 3; }
-      #acomp-s3 { grid-column: span 2; }
+      .mcall.sub {
+        font-weight: 400;
+        font-size: 23px;
+        color: #f7f9fc;
+        min-height: 130px;
+      }
       .mcol {
         background: #2a4289;
         border-radius: 12px;
-        border-top: 8px solid #fec503;
+        border-top: 8px solid #4a6fa5;
         padding: 26px 18px;
         min-height: 300px;
         display: flex;
@@ -188,7 +205,7 @@
       .dcard {
         background: #2a4289;
         border-radius: 16px;
-        border-top: 10px solid #fec503;
+        border-top: 10px solid #4a6fa5;
         padding: 44px 48px;
         min-height: 380px;
       }
@@ -198,7 +215,7 @@
         font-size: 28px;
         letter-spacing: 4px;
         text-transform: uppercase;
-        color: #fec503;
+        color: #7ba3d6;
       }
       .dtitle {
         font-family: "Poppins", sans-serif;
@@ -235,7 +252,7 @@
         width: 14px;
         height: 14px;
         border-radius: 50%;
-        background: #fec503;
+        background: #4a6fa5;
       }
       .fnote {
         position: absolute;
@@ -282,7 +299,7 @@
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        background: #fec503;
+        background: #4a6fa5;
       }
       .step-num {
         font-family: "Poppins", sans-serif;
@@ -314,7 +331,7 @@
           { "sceneId": "problem", "notes": "El dolor: las ideas mueren sin ruta al mercado. Sin culpables, solo el gap." },
           { "sceneId": "cihubs", "notes": "Quiénes somos: dinamizadores del ecosistema. Conectamos generadores y usuarios de conocimiento." },
           { "sceneId": "ruta", "notes": "La metodología en 3 pasos. Avanzar fragmento por fragmento.", "fragments": [35.0, 38.0] },
-          { "sceneId": "acompanamiento", "notes": "Qué incluye el acompañamiento. Cerrar con que es para ideas en cualquier etapa.", "fragments": [43.0, 46.0] },
+          { "sceneId": "acompanamiento", "notes": "Qué incluye el acompañamiento. Cerrar con que es para ideas en cualquier etapa." },
           { "sceneId": "ecosistema", "notes": "Los 5 programas en lenguaje joven: a dónde puede llegar su empresa. Footnote cihubs.com/programas." },
           { "sceneId": "puerta", "notes": "Discovery (3 meses, tours, bootcamps) e Inmersión (clientes, talento, capital): la puerta de entrada." },
           { "sceneId": "invenio", "notes": "La vitrina: Invenio Fest 2026, 24 de septiembre, Universidad Invenio en Cañas." },
@@ -431,47 +448,20 @@
           <h1 class="headline" data-anim id="acomp-headline">Qué incluye el <span class="accent">acompañamiento</span></h1>
           <p class="bigidea" data-anim>Catorce piezas, una ruta</p>
           <div class="mgrid">
-            <div class="mgroup" data-anim id="acomp-s1">
-              <div class="mcol">
-                <p class="mitem-top">Qué problema resuelves</p>
-                <div class="mdiv"></div>
-                <p class="mitem-sub">En qué negocio estás</p>
-              </div>
-              <div class="mcol">
-                <p class="mitem-top">Tu digital twin startup</p>
-                <div class="mdiv"></div>
-                <p class="mitem-sub">Tu propuesta de valor</p>
-              </div>
-            </div>
-            <div class="mgroup" data-anim id="acomp-s2">
-              <div class="mcol">
-                <p class="mitem-top">Tu perfil corporativo</p>
-                <div class="mdiv"></div>
-                <p class="mitem-sub">El perfil de tu equipo</p>
-              </div>
-              <div class="mcol">
-                <p class="mitem-top">El impacto de la IA en tu solución</p>
-                <div class="mdiv"></div>
-                <p class="mitem-sub">Tu Minimum Evolvable Product</p>
-              </div>
-              <div class="mcol">
-                <p class="mitem-top">Tu pitch de ventas</p>
-                <div class="mdiv"></div>
-                <p class="mitem-sub">Tu Client Business Case</p>
-              </div>
-            </div>
-            <div class="mgroup" data-anim id="acomp-s3">
-              <div class="mcol">
-                <p class="mitem-top">Tu frase diferenciadora</p>
-                <div class="mdiv"></div>
-                <p class="mitem-sub">Tu Live Demo</p>
-              </div>
-              <div class="mcol">
-                <p class="mitem-top">Retroalimentación de expertos</p>
-                <div class="mdiv"></div>
-                <p class="mitem-sub">Selección del road show internacional</p>
-              </div>
-            </div>
+            <div class="mcall" data-anim>Qué problema resuelves</div>
+            <div class="mcall" data-anim>Tu digital twin startup</div>
+            <div class="mcall" data-anim>Tu perfil corporativo</div>
+            <div class="mcall" data-anim>El impacto de la IA en tu solución</div>
+            <div class="mcall" data-anim>Tu pitch de ventas</div>
+            <div class="mcall" data-anim>Tu frase diferenciadora</div>
+            <div class="mcall" data-anim>Retroalimentación de expertos</div>
+            <div class="mcall sub" data-anim>En qué negocio estás</div>
+            <div class="mcall sub" data-anim>Tu propuesta de valor</div>
+            <div class="mcall sub" data-anim>El perfil de tu equipo</div>
+            <div class="mcall sub" data-anim>Tu Minimum Evolvable Product</div>
+            <div class="mcall sub" data-anim>Tu Client Business Case</div>
+            <div class="mcall sub" data-anim>Tu Live Demo</div>
+            <div class="mcall sub" data-anim>Selección del road show internacional</div>
           </div>
         </div>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
@@ -611,9 +601,7 @@
 
         var fragments = [
           { time: 35.0, id: "ruta-s2", revealed: false },
-          { time: 38.0, id: "ruta-s3", revealed: false },
-          { time: 43.0, id: "acomp-s2", revealed: false },
-          { time: 46.0, id: "acomp-s3", revealed: false }
+          { time: 38.0, id: "ruta-s3", revealed: false }
         ];
 
         function fireEntrance(sceneEl) {
@@ -621,7 +609,8 @@
           if (!animEls.length) return;
           gsap.from(animEls, {
             opacity: 0, y: 28, duration: 0.4,
-            stagger: 0.07, ease: "power2.out", overwrite: true
+            stagger: 0.07, ease: "power2.out", overwrite: true,
+            onComplete: function () { gsap.set(animEls, { clearProps: "transform" }); }
           });
         }
 
@@ -630,14 +619,15 @@
           if (!el) return;
           gsap.fromTo(el,
             { opacity: 0, x: -24 },
-            { opacity: 1, x: 0, duration: 0.35, ease: "power2.out", overwrite: true });
+            { opacity: 1, x: 0, duration: 0.35, ease: "power2.out", overwrite: true,
+              onComplete: function () { gsap.set(el, { clearProps: "transform" }); } });
         }
 
         function resetFragments() {
           for (var f = 0; f < fragments.length; f++) {
             fragments[f].revealed = false;
           }
-          ["ruta-s2", "ruta-s3", "acomp-s2", "acomp-s3"].forEach(function (id) {
+          ["ruta-s2", "ruta-s3"].forEach(function (id) {
             var pEl = document.getElementById(id);
             if (pEl) gsap.set(pEl, { opacity: 0, clearProps: "transform" });
           });

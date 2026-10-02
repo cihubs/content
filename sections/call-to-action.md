@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Ready to build your next project with Astro?"
+title: "Contáctenos"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Astroplate and Astro. Build lightning-fast static sites with ease and flexibility."
+description: "Envíenos un mensaje o llámenos. Nos encanta saber de usted y estaremos encantados de responder cualquier pregunta."
 button:
   enable: true
-  label: "Fork Deploy and Edit Online 🚀"
-  link: "https://app.sitepins.com/new/clone?name=Astroplate&repository=https://github.com/zeon-studio/astroplate"
+  label: "Ubíquenos"
+  link: "https://www.google.com/maps/search/?api=1&query=Automercado+Los+Yoses,+San+José,+Costa+Rica"
 ---

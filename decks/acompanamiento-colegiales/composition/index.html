@@ -311,19 +311,18 @@
         border-radius: 12px;
         margin-top: 20px;
       }
-      .split {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 48px;
-        align-items: center;
-        margin-top: 40px;
-      }
-      .support {
-        width: 100%;
-        max-height: 440px;
+      .support-half {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 960px;
+        height: 1080px;
         object-fit: cover;
-        border-radius: 16px;
       }
+      .split-left .headline,
+      .split-left .bigidea,
+      .split-left .kicker,
+      .split-left .blist { max-width: 760px; }
       .dgrid.single {
         grid-template-columns: minmax(0, 920px);
         justify-content: center;
@@ -418,18 +417,16 @@
       <div class="goldbar"></div>
       <section id="clip-cihubs" class="clip" data-start="24" data-duration="8" data-track-index="1">
         <img class="watermark" src="media/bg-04-cihubs.jpg" alt="" />
-        <div class="pad">
+        <div class="pad split-left">
           <p class="kicker" data-anim id="cihubs-kicker">Quiénes somos</p>
           <h1 class="headline" data-anim id="cihubs-headline">Dinamizamos el ecosistema<br />de innovación <span class="accent">de Costa Rica</span></h1>
           <p class="bigidea" data-anim><span class="wstrong">Conectamos a nivel global</span><br />a los generadores y usuarios del conocimiento</p>
-          <div class="split">
-            <ul class="blist" data-anim style="margin-top: 0;">
-              <li>Proyectos conjuntos universidad-empresa</li>
-              <li>Incubación de base tecnológica</li>
-            </ul>
-            <img class="support" data-anim src="media/support-04-cihubs.jpg" alt="Investigación CIHUBS" />
-          </div>
+          <ul class="blist" data-anim style="margin-top: 40px;">
+            <li>Proyectos conjuntos universidad-empresa</li>
+            <li>Incubación de base tecnológica</li>
+          </ul>
         </div>
+        <img class="support-half" data-anim src="media/support-04-cihubs.jpg" alt="Investigación CIHUBS" />
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
         <div class="slideno">04 / 09</div>
       </section>
@@ -470,18 +467,16 @@
     <div id="scene-descubrimiento" class="slide slide-dark scene-frame" data-composition-id="descubrimiento" data-start="40" data-duration="8" data-label="Discovery" data-width="1920" data-height="1080">
       <div class="goldbar"></div>
       <section id="clip-descubrimiento" class="clip" data-start="40" data-duration="8" data-track-index="1">
-        <div class="pad">
+        <div class="pad split-left">
           <p class="kicker" data-anim id="disc-kicker">Etapa I - duración: 3 meses</p>
           <h1 class="headline" data-anim id="disc-headline">Empieza por <span class="accent">Discovery</span></h1>
           <p class="bigidea" data-anim>Conoce la red global de CIHUBS</p>
-          <div class="split">
-            <ul class="blist" data-anim style="margin-top: 0;">
-              <li>Innovation Tours: Silicon Valley y más</li>
-              <li>Bootcamps certificados</li>
-            </ul>
-            <img class="support" data-anim src="media/support-06-discovery.jpg" alt="Discovery CIHUBS" />
-          </div>
+          <ul class="blist" data-anim style="margin-top: 40px;">
+            <li>Innovation Tours: Silicon Valley y más</li>
+            <li>Bootcamps certificados</li>
+          </ul>
         </div>
+        <img class="support-half" data-anim src="media/support-06-discovery.jpg" alt="Discovery CIHUBS" />
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
         <div class="slideno">06 / 09</div>
       </section>
@@ -522,20 +517,16 @@
       <div class="goldbar"></div>
       <section id="clip-puerta" class="clip" data-start="56" data-duration="8" data-track-index="1">
         <img class="watermark" src="media/bg-08-puerta.jpg" alt="" />
-        <div class="pad">
+        <div class="pad split-left">
           <p class="kicker" data-anim id="puerta-kicker">Etapa II - Según Tus Resultados</p>
           <h1 class="headline" data-anim id="puerta-headline">Continúa con <span class="accent">Inmersión</span></h1>
-          <div class="dgrid single">
-            <div class="dcard" data-anim>
-              <h2 class="dtitle">Inmersión</h2>
-              <p class="dsub">Crece con aliados internacionales</p>
-              <ul class="dbullets">
-                <li>Nuevos clientes y mercados</li>
-                <li>Talento especializado y capital</li>
-              </ul>
-            </div>
-          </div>
+          <p class="bigidea" data-anim>Crece con aliados internacionales</p>
+          <ul class="blist" data-anim style="margin-top: 40px;">
+            <li>Nuevos clientes y mercados</li>
+            <li>Talento especializado y capital</li>
+          </ul>
         </div>
+        <img class="support-half" data-anim src="media/support-08-inmersion.jpg" alt="Inmersión CIHUBS" />
         <p class="fnote" data-anim>cihubs.com/programas-inmersion</p>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
         <div class="slideno">08 / 09</div>

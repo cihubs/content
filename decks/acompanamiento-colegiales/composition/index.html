@@ -131,6 +131,8 @@
         flex: 1;
         border-top: 10px solid #4a6fa5;
         padding-top: 28px;
+        display: flex;
+        flex-direction: column;
       }
       .mgrid {
         display: grid;
@@ -309,8 +311,9 @@
         height: 160px;
         object-fit: cover;
         border-radius: 12px;
-        margin-top: 20px;
+        margin-top: auto;
       }
+      .step-desc { margin-bottom: 20px; }
       .support-half {
         position: absolute;
         top: 0;
@@ -439,7 +442,6 @@
         <img class="watermark" src="media/bg-05-ruta.jpg" alt="" />
         <div class="pad">
           <h1 class="headline" data-anim id="ruta-headline" style="font-size: 80px;">Problema, <span class="strong">Diferenciador,</span> y Producto</h1>
-          <p class="bigidea" data-anim>Nuestra metodología</p>
           <div class="steps">
             <div class="step" data-anim>
               <div class="step-title">Problema de mercado</div>

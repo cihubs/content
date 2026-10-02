@@ -123,7 +123,6 @@
         opacity: 0.12;
         pointer-events: none;
       }
-      #ruta-s2, #ruta-s3 { opacity: 0; }
       .steps { display: flex; gap: 48px; margin-top: 56px; }
       .step {
         flex: 1;
@@ -330,7 +329,7 @@
           { "sceneId": "hook", "notes": "Gancho: su proyecto de colegio ya es una semilla. Pausa en la pregunta." },
           { "sceneId": "problem", "notes": "El dolor: las ideas mueren sin ruta al mercado. Sin culpables, solo el gap." },
           { "sceneId": "cihubs", "notes": "Quiénes somos: dinamizadores del ecosistema. Conectamos generadores y usuarios de conocimiento." },
-          { "sceneId": "ruta", "notes": "La metodología en 3 pasos. Avanzar fragmento por fragmento.", "fragments": [35.0, 38.0] },
+          { "sceneId": "ruta", "notes": "La metodología en 3 pasos. Entran los 3 juntos, sin staging." },
           { "sceneId": "acompanamiento", "notes": "Qué incluye el acompañamiento. Cerrar con que es para ideas en cualquier etapa." },
           { "sceneId": "ecosistema", "notes": "Los 5 programas en lenguaje joven: a dónde puede llegar su empresa. Footnote cihubs.com/programas." },
           { "sceneId": "puerta", "notes": "Discovery (3 meses, tours, bootcamps) e Inmersión (clientes, talento, capital): la puerta de entrada." },
@@ -417,17 +416,17 @@
           <h1 class="headline" data-anim id="ruta-headline">Tres pasos, <span class="light">cero humo</span></h1>
           <p class="bigidea" data-anim>Problema, diferencia, producto</p>
           <div class="steps">
-            <div class="step" data-anim id="ruta-s1">
+            <div class="step" data-anim>
               <div class="step-num">1</div>
               <div class="step-title">Problema de mercado</div>
               <div class="step-desc">Una necesidad real que alguien pague por resolver.</div>
             </div>
-            <div class="step" data-anim id="ruta-s2">
+            <div class="step" data-anim>
               <div class="step-num">2</div>
               <div class="step-title">Diferenciador tecnológico</div>
               <div class="step-desc">Algo que la competencia no copie en un fin de semana.</div>
             </div>
-            <div class="step" data-anim id="ruta-s3">
+            <div class="step" data-anim>
               <div class="step-num">3</div>
               <div class="step-title">Producto y servicio</div>
               <div class="step-desc">Convertir la solución en oferta que el mercado adopte.</div>
@@ -599,10 +598,7 @@
         ];
         var lastActiveId = null;
 
-        var fragments = [
-          { time: 35.0, id: "ruta-s2", revealed: false },
-          { time: 38.0, id: "ruta-s3", revealed: false }
-        ];
+        var fragments = [];
 
         function fireEntrance(sceneEl) {
           var animEls = sceneEl.querySelectorAll("[data-anim]");
@@ -627,7 +623,7 @@
           for (var f = 0; f < fragments.length; f++) {
             fragments[f].revealed = false;
           }
-          ["ruta-s2", "ruta-s3"].forEach(function (id) {
+          [].forEach(function (id) {
             var pEl = document.getElementById(id);
             if (pEl) gsap.set(pEl, { opacity: 0, clearProps: "transform" });
           });

@@ -3,7 +3,7 @@
 banner:
   title: "Creamos Hubs de Innovación"
   content: "Somos una plataforma de globalización del conocimiento que dinamiza ecosistemas de innovación."
-  image: "/images/banner.png"
+  image: ""
   button:
     enable: true
     label: "Ver más"

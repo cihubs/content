@@ -315,6 +315,7 @@
 
     <script>
       (function () {
+        window.__timelines = window.__timelines || {};
         var tl = gsap.timeline({ paused: true });
         tl.to({}, { duration: 64 });
         window.__timelines["deck"] = tl;

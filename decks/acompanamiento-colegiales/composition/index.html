@@ -143,7 +143,7 @@
         border-radius: 12px;
         border-top: 8px solid #4a6fa5;
         padding: 22px 16px;
-        min-height: 150px;
+        min-height: 190px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -159,7 +159,7 @@
         font-weight: 400;
         font-size: 23px;
         color: #f7f9fc;
-        min-height: 130px;
+        min-height: 170px;
       }
       .mcol {
         background: #2a4289;
@@ -304,6 +304,13 @@
         border-radius: 50%;
         background: #4a6fa5;
       }
+      .step-img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
       .split {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -353,16 +360,14 @@
           { "sceneId": "ruta", "notes": "La metodología en 3 pasos. Entran los 3 juntos, sin staging." },
           { "sceneId": "descubrimiento", "notes": "Discovery promovido a slide propio: Etapa I, 3 meses, tours y bootcamps. Footnote cihubs.com/programas-discovery." },
           { "sceneId": "acompanamiento", "notes": "Qué incluye el acompañamiento. Cerrar con que es para ideas en cualquier etapa." },
-          { "sceneId": "ecosistema", "notes": "Los 5 programas en lenguaje joven: a dónde puede llegar su empresa. Footnote cihubs.com/programas." },
           { "sceneId": "puerta", "notes": "Solo Inmersión: Etapa II por resultados, clientes, talento y capital. Footnote cihubs.com/programas-inmersion." },
-          { "sceneId": "invenio", "notes": "La vitrina: Invenio Fest 2026, 24 de septiembre, Universidad Invenio en Cañas." },
-          { "sceneId": "cta", "notes": "Cierre + llamado: conversemos hoy. Dejar contacto visible 5 segundos." }
+          { "sceneId": "call-to-action", "notes": "Cierre fusionado: nos vemos en la próxima Expo Técnica + contacto juanignacio@cihubs.com." }
         ],
         "slideSequences": []
       }
     </script>
 
-    <div id="scene-deck" data-composition-id="deck" data-start="0" data-duration="88" data-width="1920" data-height="1080" data-track-index="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"></div>
+    <div id="scene-deck" data-composition-id="deck" data-start="0" data-duration="72" data-width="1920" data-height="1080" data-track-index="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"></div>
 
     <!-- Slide 1 — cover [0,8] -->
     <div id="scene-cover" class="slide slide-dark scene-frame" data-composition-id="cover" data-start="0" data-duration="8" data-label="Portada" data-width="1920" data-height="1080">
@@ -375,7 +380,7 @@
           <p class="body" data-anim id="cover-body">De la <strong>idea de negocio</strong> de hoy,<br />a la empresa <strong>tecnológica</strong> de mañana.</p>
         </div>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
-        <div class="slideno">01 / 10</div>
+        <div class="slideno">01 / 09</div>
       </section>
     </div>
 
@@ -390,7 +395,7 @@
           <p class="body" data-anim id="hook-body">La pregunta no debe ser si eres capaz.<br />Si llegaste hasta aquí, es porque ya sabemos que <strong>sí lo eres</strong>.<br />La pregunta correcta es: ¿Sabés cómo lograr hacerlo <strong>una realidad?</strong></p>
         </div>
         <img class="brand-logo" src="media/logo.svg" alt="CIHUBS" />
-        <div class="slideno">02 / 10</div>
+        <div class="slideno">02 / 09</div>
       </section>
     </div>
 
@@ -404,7 +409,7 @@
           <p class="body" data-anim id="problem-body">Si no estás resolviendo un verdadero <strong>problema social</strong>, y no tenés un diferenciador <strong>de base tecnológica</strong>, ni el mejor proyecto despega.</p>
         </div>
         <img class="brand-logo" src="media/logo.svg" alt="CIHUBS" />
-        <div class="slideno">03 / 10</div>
+        <div class="slideno">03 / 09</div>
       </section>
     </div>
 
@@ -426,7 +431,7 @@
           </div>
         </div>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
-        <div class="slideno">04 / 10</div>
+        <div class="slideno">04 / 09</div>
       </section>
     </div>
 
@@ -436,25 +441,28 @@
       <section id="clip-ruta" class="clip" data-start="32" data-duration="8" data-track-index="1">
         <img class="watermark" src="media/bg-05-ruta.jpg" alt="" />
         <div class="pad">
-          <h1 class="headline" data-anim id="ruta-headline">Problema, <span class="strong">Diferenciador,</span><br />y Producto</h1>
+          <h1 class="headline" data-anim id="ruta-headline" style="font-size: 60px;">Problema, <span class="strong">Diferenciador,</span> y Producto</h1>
           <p class="bigidea" data-anim>Nuestra metodología</p>
           <div class="steps">
             <div class="step" data-anim>
               <div class="step-title">Problema de mercado</div>
               <div class="step-desc">Una necesidad real que alguien <strong>desee pagar</strong> por resolver.</div>
+              <img class="step-img" data-anim src="media/support-05-p1.jpg" alt="Problema de mercado" />
             </div>
             <div class="step" data-anim>
               <div class="step-title">Diferenciador tecnológico</div>
               <div class="step-desc">Algo que la competencia no copie en un fin de semana.</div>
+              <img class="step-img" data-anim src="media/support-05-p2.jpg" alt="Diferenciador tecnológico" />
             </div>
             <div class="step" data-anim>
               <div class="step-title">Producto y servicio</div>
               <div class="step-desc"><strong>Posicionar</strong> la solución que el mercado <strong>acepte</strong>.</div>
+              <img class="step-img" data-anim src="media/support-05-p3.jpg" alt="Producto y servicio" />
             </div>
           </div>
         </div>
         <img class="brand-logo" src="media/logo.svg" alt="CIHUBS" />
-        <div class="slideno">05 / 10</div>
+        <div class="slideno">05 / 09</div>
       </section>
     </div>
 
@@ -463,23 +471,19 @@
       <div class="goldbar"></div>
       <section id="clip-descubrimiento" class="clip" data-start="40" data-duration="8" data-track-index="1">
         <div class="pad">
-          <p class="kicker" data-anim id="disc-kicker">Tu puerta de entrada</p>
+          <p class="kicker" data-anim id="disc-kicker">Etapa I - duración: 3 meses</p>
           <h1 class="headline" data-anim id="disc-headline">Empieza por <span class="accent">Discovery</span></h1>
-          <p class="bigidea" data-anim>Etapa I · 3 meses</p>
-          <div class="dgrid single">
-            <div class="dcard" data-anim>
-              <h2 class="dtitle">Discovery</h2>
-              <p class="dsub">Conoce la red global de CIHUBS</p>
-              <ul class="dbullets">
-                <li>Innovation Tours: Silicon Valley y más</li>
-                <li>Bootcamps certificados</li>
-              </ul>
-            </div>
+          <p class="bigidea" data-anim>Conoce la red global de CIHUBS</p>
+          <div class="split">
+            <ul class="blist" data-anim style="margin-top: 0;">
+              <li>Innovation Tours: Silicon Valley y más</li>
+              <li>Bootcamps certificados</li>
+            </ul>
+            <img class="support" data-anim src="media/support-06-discovery.jpg" alt="Discovery CIHUBS" />
           </div>
         </div>
-        <p class="fnote" data-anim>cihubs.com/programas-discovery</p>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
-        <div class="slideno">06 / 11</div>
+        <div class="slideno">06 / 09</div>
       </section>
     </div>
 
@@ -489,9 +493,8 @@
       <section id="clip-acompanamiento" class="clip" data-start="48" data-duration="8" data-track-index="1">
         <img class="watermark" src="media/bg-06-acompanamiento.jpg" alt="" />
         <div class="pad">
-          <p class="kicker" data-anim id="acomp-kicker">Programa de acompañamiento</p>
+          <p class="kicker" data-anim id="acomp-kicker">Etapa I - Discovery</p>
           <h1 class="headline" data-anim id="acomp-headline">Qué incluye el <span class="accent">acompañamiento</span></h1>
-          <p class="bigidea" data-anim>Catorce piezas, una ruta</p>
           <div class="mgrid">
             <div class="mcall" data-anim>Qué problema resuelves</div>
             <div class="mcall" data-anim>Tu digital twin startup</div>
@@ -510,62 +513,18 @@
           </div>
         </div>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
-        <div class="slideno">07 / 11</div>
+        <div class="slideno">07 / 09</div>
       </section>
     </div>
 
-    <!-- Slide 8 — ecosistema [56,64] -->
-    <div id="scene-ecosistema" class="slide scene-frame" data-composition-id="ecosistema" data-start="56" data-duration="8" data-label="Ecosistema" data-width="1920" data-height="1080">
+    <!-- Slide 8 — inmersion [56,64] -->
+    <div id="scene-puerta" class="slide slide-dark scene-frame" data-composition-id="puerta" data-start="56" data-duration="8" data-label="Inmersión" data-width="1920" data-height="1080">
       <div class="goldbar"></div>
-      <section id="clip-ecosistema" class="clip" data-start="56" data-duration="8" data-track-index="1">
-        <img class="watermark" src="media/bg-07-ecosistema.jpg" alt="" />
-        <div class="pad">
-          <p class="kicker" data-anim id="eco-kicker">El ecosistema te espera</p>
-          <h1 class="headline" data-anim id="eco-headline">Cuando crezcas, <span class="strong">esto te espera</span></h1>
-          <p class="bigidea" data-anim>Cinco puertas al futuro</p>
-          <div class="pgrid">
-            <div class="mcol" data-anim>
-              <p class="mitem-top">Soft Landing</p>
-              <div class="mdiv"></div>
-              <p class="mitem-sub">Vende tu empresa en otros países</p>
-            </div>
-            <div class="mcol" data-anim>
-              <p class="mitem-top">Zonas Francas high-tech</p>
-              <div class="mdiv"></div>
-              <p class="mitem-sub">Trabaja donde están las gigantes</p>
-            </div>
-            <div class="mcol" data-anim>
-              <p class="mitem-top">Encadenamientos globales</p>
-              <div class="mdiv"></div>
-              <p class="mitem-sub">Sé proveedor de una multinacional</p>
-            </div>
-            <div class="mcol" data-anim>
-              <p class="mitem-top">Ciudades científicas</p>
-              <div class="mdiv"></div>
-              <p class="mitem-sub">Tu cantón, un hub de innovación</p>
-            </div>
-            <div class="mcol" data-anim>
-              <p class="mitem-top">Brazo comercial</p>
-              <div class="mdiv"></div>
-              <p class="mitem-sub">Convierte investigación en empresa</p>
-            </div>
-          </div>
-        </div>
-        <p class="fnote" data-anim>Explóralos todos: cihubs.com/programas</p>
-        <img class="brand-logo" src="media/logo.svg" alt="CIHUBS" />
-        <div class="slideno">08 / 11</div>
-      </section>
-    </div>
-
-    <!-- Slide 9 — inmersion [64,72] -->
-    <div id="scene-puerta" class="slide slide-dark scene-frame" data-composition-id="puerta" data-start="64" data-duration="8" data-label="Inmersión" data-width="1920" data-height="1080">
-      <div class="goldbar"></div>
-      <section id="clip-puerta" class="clip" data-start="64" data-duration="8" data-track-index="1">
+      <section id="clip-puerta" class="clip" data-start="56" data-duration="8" data-track-index="1">
         <img class="watermark" src="media/bg-08-puerta.jpg" alt="" />
         <div class="pad">
-          <p class="kicker" data-anim id="puerta-kicker">Tu puerta de entrada</p>
+          <p class="kicker" data-anim id="puerta-kicker">Etapa II - Según Tus Resultados</p>
           <h1 class="headline" data-anim id="puerta-headline">Continúa con <span class="accent">Inmersión</span></h1>
-          <p class="bigidea" data-anim>Etapa II · por resultados</p>
           <div class="dgrid single">
             <div class="dcard" data-anim>
               <h2 class="dtitle">Inmersión</h2>
@@ -579,37 +538,22 @@
         </div>
         <p class="fnote" data-anim>cihubs.com/programas-inmersion</p>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
-        <div class="slideno">09 / 11</div>
+        <div class="slideno">08 / 09</div>
       </section>
     </div>
 
-    <!-- Slide 10 — invenio [72,80] -->
-    <div id="scene-invenio" class="slide scene-frame" data-composition-id="invenio" data-start="72" data-duration="8" data-label="Invenio Fest" data-width="1920" data-height="1080">
+    <!-- Slide 9 — cierre [64,72] -->
+    <div id="scene-call-to-action" class="slide slide-dark scene-frame" data-composition-id="call-to-action" data-start="64" data-duration="8" data-label="Call to action" data-width="1920" data-height="1080">
       <div class="goldbar"></div>
-      <section id="clip-invenio" class="clip" data-start="72" data-duration="8" data-track-index="1">
-        <img class="watermark" src="media/bg-09-invenio.jpg" alt="" />
-        <div class="pad">
-          <p class="kicker" data-anim id="invenio-kicker">Tu vitrina</p>
-          <h1 class="headline" data-anim id="invenio-headline">Nos vemos en el<br /><span class="strong">Invenio Fest 2026</span></h1>
-          <p class="body" data-anim id="invenio-body">Jueves 24 de septiembre · Universidad Invenio, Cañas, Guanacaste. Lleva tu emprendimiento y te ayudamos a prepararlo.</p>
-        </div>
-        <img class="brand-logo" src="media/logo.svg" alt="CIHUBS" />
-        <div class="slideno">10 / 11</div>
-      </section>
-    </div>
-
-    <!-- Slide 11 — cta [80,88] -->
-    <div id="scene-cta" class="slide slide-dark scene-frame" data-composition-id="cta" data-start="80" data-duration="8" data-label="Cierre" data-width="1920" data-height="1080">
-      <div class="goldbar"></div>
-      <section id="clip-cta" class="clip" data-start="80" data-duration="8" data-track-index="1">
+      <section id="clip-call-to-action" class="clip" data-start="64" data-duration="8" data-track-index="1">
         <img class="watermark" src="media/bg-10-cta.jpg" alt="" />
         <div class="pad">
-          <p class="kicker" data-anim id="cta-kicker">Último slide</p>
-          <h1 class="headline" data-anim id="cta-headline">Tu futuro<br /><span class="accent">empieza hoy.</span></h1>
-          <p class="body" data-anim id="cta-body">Conversemos: cihubs.com · info@cihubs.com</p>
+          <p class="kicker" data-anim id="cierre-kicker">Tu vitrina</p>
+          <h1 class="headline" data-anim id="cierre-headline">Nos vemos en la<br /><span class="accent">próxima Expo Técnica</span></h1>
+          <p class="body" data-anim id="cierre-contact">Conversemos: cihubs.com · juanignacio@cihubs.com</p>
         </div>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
-        <div class="slideno">11 / 11</div>
+        <div class="slideno">09 / 09</div>
       </section>
     </div>
 
@@ -617,7 +561,7 @@
       (function () {
         window.__timelines = window.__timelines || {};
         var tl = gsap.timeline({ paused: true });
-        tl.to({}, { duration: 88 });
+        tl.to({}, { duration: 72 });
         window.__timelines["deck"] = tl;
         var rootTl = tl;
 
@@ -629,10 +573,8 @@
           { id: "scene-ruta", start: 32, end: 40 },
           { id: "scene-descubrimiento", start: 40, end: 48 },
           { id: "scene-acompanamiento", start: 48, end: 56 },
-          { id: "scene-ecosistema", start: 56, end: 64 },
-          { id: "scene-puerta", start: 64, end: 72 },
-          { id: "scene-invenio", start: 72, end: 80 },
-          { id: "scene-cta", start: 80, end: 88 }
+          { id: "scene-puerta", start: 56, end: 64 },
+          { id: "scene-call-to-action", start: 64, end: 72 }
         ];
         var lastActiveId = null;
 
@@ -711,17 +653,15 @@
           { id: "ruta", start: 32, duration: 8 },
           { id: "descubrimiento", start: 40, duration: 8 },
           { id: "acompanamiento", start: 48, duration: 8 },
-          { id: "ecosistema", start: 56, duration: 8 },
-          { id: "puerta", start: 64, duration: 8 },
-          { id: "invenio", start: 72, duration: 8 },
-          { id: "cta", start: 80, duration: 8 }
+          { id: "puerta", start: 56, duration: 8 },
+          { id: "call-to-action", start: 64, duration: 8 }
         ];
         function postTimeline() {
           parent.postMessage(
             {
               source: "hf-preview",
               type: "timeline",
-              durationInFrames: 88 * 30,
+              durationInFrames: 72 * 30,
               scenes: scenes
             },
             "*"

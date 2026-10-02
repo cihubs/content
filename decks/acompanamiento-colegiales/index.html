@@ -39,5 +39,52 @@
         }
       </script>
     </hyperframes-slideshow>
+    <script>
+      // Deep-link: ?slide=N (1-based) or ?t=seconds. Uses the slideshow
+      // controller when available (keeps nav counter in sync), falls back
+      // to seeking the composition iframe directly (same origin).
+      (function () {
+        var m = /[?&](?:slide|t)=([^&]+)/.exec(location.search);
+        if (!m) return;
+        var isSlide = location.search.indexOf("slide=") !== -1;
+        var n = parseInt(decodeURIComponent(m[1]), 10);
+        var time;
+        if (isSlide) {
+          if (!(n >= 1 && n <= 9)) return;
+          time = (n - 1) * 8 + 0.01;
+        } else {
+          time = parseFloat(m[1]);
+          if (!isFinite(time) || time < 0) return;
+          n = Math.floor(time / 8) + 1;
+        }
+        var tries = 0;
+        var timer = setInterval(function () {
+          tries++;
+          var done = false;
+          try {
+            var show = document.querySelector("hyperframes-slideshow");
+            if (show && show.controller && show.controller.goToSlide) {
+              show.controller.goToSlide(n - 1);
+              done = true;
+            }
+          } catch (e) {}
+          if (!done) {
+            try {
+              var player = document.querySelector("hyperframes-player");
+              var frame =
+                player &&
+                player.shadowRoot &&
+                player.shadowRoot.querySelector("iframe");
+              var w = frame && frame.contentWindow;
+              if (w && w.__hfSetTime) {
+                w.__hfSetTime(time);
+                done = true;
+              }
+            } catch (e2) {}
+          }
+          if (done || tries > 100) clearInterval(timer);
+        }, 150);
+      })();
+    </script>
   </body>
 </html>

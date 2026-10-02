@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      @font-face {
+        font-family: "Poppins";
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src: url("fonts/poppins-700-latin.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+        src: url("fonts/montserrat-latin.woff2") format("woff2");
+      }
+      html, body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+      }
+      .scene-frame {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .scene-frame.is-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .slide {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #ffffff;
+        color: #203370;
+      }
+      .slide-dark { background: #203370; color: #ffffff; }
+      .pad { position: absolute; inset: 0; padding: 120px 160px; }
+      .kicker {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 44px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: #4a6fa5;
+      }
+      .slide-dark .kicker { color: #fec503; }
+      .headline {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 1.08;
+        letter-spacing: -2px;
+        margin-top: 28px;
+      }
+      .body {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 1.35;
+        margin-top: 36px;
+        max-width: 1500px;
+      }
+      .accent { color: #fec503; }
+      .light { color: #4a6fa5; }
+      .brand {
+        position: absolute;
+        left: 160px;
+        bottom: 80px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 44px;
+        letter-spacing: 4px;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+      }
+      .slide-dark .brand { color: #ffffff; }
+      .slideno {
+        position: absolute;
+        right: 140px;
+        bottom: 80px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 40px;
+        opacity: 0.85;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+      }
+      .slide-dark .slideno { color: #ffffff; }
+      .goldbar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 1080px;
+        background: #fec503;
+      }
+      .watermark {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+        opacity: 0.12;
+        pointer-events: none;
+      }
+      #ruta-s2, #ruta-s3, #acomp-s2, #acomp-s3 { opacity: 0; }
+      .steps { display: flex; gap: 48px; margin-top: 56px; }
+      .step {
+        flex: 1;
+        border-top: 10px solid #fec503;
+        padding-top: 28px;
+      }
+      .step-num {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 72px;
+        color: #203370;
+      }
+      .step-title {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 44px;
+        margin-top: 12px;
+      }
+      .step-desc {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 40px;
+        margin-top: 12px;
+        color: #333333;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="application/hyperframes-slideshow+json">
+      {
+        "slides": [
+          { "sceneId": "cover", "notes": "Bienvenida. Webinar La ruta del emprendedor tecnológico. Audiencia: estudiantes de colegios técnicos, futuros founders." },
+          { "sceneId": "hook", "notes": "Gancho: su proyecto de colegio ya es una semilla. Pausa en la pregunta." },
+          { "sceneId": "problem", "notes": "El dolor: las ideas mueren sin ruta al mercado. Sin culpables, solo el gap." },
+          { "sceneId": "cihubs", "notes": "Quiénes somos: dinamizadores del ecosistema. Conectamos generadores y usuarios de conocimiento." },
+          { "sceneId": "ruta", "notes": "La metodología en 3 pasos. Avanzar fragmento por fragmento.", "fragments": [35.0, 38.0] },
+          { "sceneId": "acompanamiento", "notes": "Qué incluye el acompañamiento. Cerrar con que es para ideas en cualquier etapa.", "fragments": [43.0, 46.0] },
+          { "sceneId": "invenio", "notes": "La vitrina: Invenio Fest 2026, 24 de septiembre, Universidad Invenio en Cañas." },
+          { "sceneId": "cta", "notes": "Cierre + llamado: conversemos hoy. Dejar contacto visible 5 segundos." }
+        ],
+        "slideSequences": []
+      }
+    </script>
+
+    <div id="scene-deck" data-composition-id="deck" data-start="0" data-duration="64" data-width="1920" data-height="1080" data-track-index="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"></div>
+
+    <!-- Slide 1 — cover [0,8] -->
+    <div id="scene-cover" class="slide slide-dark scene-frame" data-composition-id="cover" data-start="0" data-duration="8" data-label="Portada" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-cover" class="clip" data-start="0" data-duration="8" data-track-index="1">
+        <img class="watermark" src="media/cover-bg.jpg" alt="" />
+        <div class="pad">
+          <p class="kicker" data-anim id="cover-kicker">CIHUBS · Webinar</p>
+          <h1 class="headline" data-anim id="cover-headline">La ruta del<br />emprendedor tecnológico</h1>
+          <p class="body" data-anim id="cover-body">De la idea de hoy a la empresa tecnológica de mañana.</p>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">01 / 08</div>
+      </section>
+    </div>
+
+    <!-- Slide 2 — hook [8,16] -->
+    <div id="scene-hook" class="slide scene-frame" data-composition-id="hook" data-start="8" data-duration="8" data-label="Gancho" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-hook" class="clip" data-start="8" data-duration="8" data-track-index="1">
+        <img class="watermark" src="media/slide-bg.jpg" alt="" />
+        <div class="pad">
+          <p class="kicker" data-anim id="hook-kicker">Para futuros founders</p>
+          <h1 class="headline" data-anim id="hook-headline">Tu proyecto de colegio ya es<br />una <span class="light">semilla de empresa</span></h1>
+          <p class="body" data-anim id="hook-body">La pregunta no es si puedes. Es si conoces la ruta.</p>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">02 / 08</div>
+      </section>
+    </div>
+
+    <!-- Slide 3 — problem [16,24] -->
+    <div id="scene-problem" class="slide scene-frame" data-composition-id="problem" data-start="16" data-duration="8" data-label="El problema" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-problem" class="clip" data-start="16" data-duration="8" data-track-index="1">
+        <img class="watermark" src="media/slide-bg.jpg" alt="" />
+        <div class="pad">
+          <p class="kicker" data-anim id="problem-kicker">El problema</p>
+          <h1 class="headline" data-anim id="problem-headline">Las buenas ideas mueren<br />cuando no hay ruta al mercado</h1>
+          <p class="body" data-anim id="problem-body">Sin problema real de mercado y sin diferenciador tecnológico, ni el mejor proyecto despega.</p>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">03 / 08</div>
+      </section>
+    </div>
+
+    <!-- Slide 4 — cihubs [24,32] -->
+    <div id="scene-cihubs" class="slide slide-dark scene-frame" data-composition-id="cihubs" data-start="24" data-duration="8" data-label="CIHUBS" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-cihubs" class="clip" data-start="24" data-duration="8" data-track-index="1">
+        <div class="pad">
+          <p class="kicker" data-anim id="cihubs-kicker">Quiénes somos</p>
+          <h1 class="headline" data-anim id="cihubs-headline">Dinamizamos el ecosistema<br />de innovación <span class="accent">de Costa Rica</span></h1>
+          <p class="body" data-anim id="cihubs-body">Conectamos generadores y usuarios de conocimiento en proyectos conjuntos e incubación de base tecnológica.</p>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">04 / 08</div>
+      </section>
+    </div>
+
+    <!-- Slide 5 — ruta [32,40], fragments 35, 38 -->
+    <div id="scene-ruta" class="slide scene-frame" data-composition-id="ruta" data-start="32" data-duration="8" data-label="La ruta" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-ruta" class="clip" data-start="32" data-duration="8" data-track-index="1">
+        <img class="watermark" src="media/slide-bg.jpg" alt="" />
+        <div class="pad">
+          <p class="kicker" data-anim id="ruta-kicker">Nuestra metodología</p>
+          <h1 class="headline" data-anim id="ruta-headline">Tres pasos, cero humo</h1>
+          <div class="steps">
+            <div class="step" data-anim id="ruta-s1">
+              <div class="step-num">1</div>
+              <div class="step-title">Problema de mercado</div>
+              <div class="step-desc">Una necesidad real que alguien pague por resolver.</div>
+            </div>
+            <div class="step" data-anim id="ruta-s2">
+              <div class="step-num">2</div>
+              <div class="step-title">Diferenciador tecnológico</div>
+              <div class="step-desc">Algo que la competencia no copie en un fin de semana.</div>
+            </div>
+            <div class="step" data-anim id="ruta-s3">
+              <div class="step-num">3</div>
+              <div class="step-title">Producto y servicio</div>
+              <div class="step-desc">Convertir la solución en oferta que el mercado adopte.</div>
+            </div>
+          </div>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">05 / 08</div>
+      </section>
+    </div>
+
+    <!-- Slide 6 — acompañamiento [40,48], fragments 43, 46 -->
+    <div id="scene-acompanamiento" class="slide slide-dark scene-frame" data-composition-id="acompanamiento" data-start="40" data-duration="8" data-label="Acompañamiento" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-acompanamiento" class="clip" data-start="40" data-duration="8" data-track-index="1">
+        <div class="pad">
+          <p class="kicker" data-anim id="acomp-kicker">Programa de acompañamiento</p>
+          <h1 class="headline" data-anim id="acomp-headline">No caminas la ruta <span class="accent">en soledad</span></h1>
+          <div class="steps">
+            <div class="step" data-anim id="acomp-s1" style="border-top-color: #ffffff">
+              <div class="step-title" style="color: #ffffff">Incubación</div>
+              <div class="step-desc" style="color: #f7f9fc">De la idea al primer prototipo validado.</div>
+            </div>
+            <div class="step" data-anim id="acomp-s2" style="border-top-color: #ffffff">
+              <div class="step-title" style="color: #ffffff">Aceleración</div>
+              <div class="step-desc" style="color: #f7f9fc">Del prototipo al mercado que paga.</div>
+            </div>
+            <div class="step" data-anim id="acomp-s3" style="border-top-color: #ffffff">
+              <div class="step-title" style="color: #ffffff">Conexiones</div>
+              <div class="step-desc" style="color: #f7f9fc">Ecosistema, mentores e inversionistas.</div>
+            </div>
+          </div>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">06 / 08</div>
+      </section>
+    </div>
+
+    <!-- Slide 7 — invenio [48,56] -->
+    <div id="scene-invenio" class="slide scene-frame" data-composition-id="invenio" data-start="48" data-duration="8" data-label="Invenio Fest" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-invenio" class="clip" data-start="48" data-duration="8" data-track-index="1">
+        <img class="watermark" src="media/slide-bg.jpg" alt="" />
+        <div class="pad">
+          <p class="kicker" data-anim id="invenio-kicker">Tu vitrina</p>
+          <h1 class="headline" data-anim id="invenio-headline">Nos vemos en el<br />Invenio Fest 2026</h1>
+          <p class="body" data-anim id="invenio-body">Jueves 24 de septiembre · Universidad Invenio, Cañas, Guanacaste. Lleva tu emprendimiento y te ayudamos a prepararlo.</p>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">07 / 08</div>
+      </section>
+    </div>
+
+    <!-- Slide 8 — cta [56,64] -->
+    <div id="scene-cta" class="slide slide-dark scene-frame" data-composition-id="cta" data-start="56" data-duration="8" data-label="Cierre" data-width="1920" data-height="1080">
+      <div class="goldbar"></div>
+      <section id="clip-cta" class="clip" data-start="56" data-duration="8" data-track-index="1">
+        <div class="pad">
+          <p class="kicker" data-anim id="cta-kicker">Último slide</p>
+          <h1 class="headline" data-anim id="cta-headline">La ruta existe.<br /><span class="accent">Empieza hoy.</span></h1>
+          <p class="body" data-anim id="cta-body">Conversemos: cihubs.com · info@cihubs.com</p>
+        </div>
+        <div class="brand">CIHUBS</div>
+        <div class="slideno">08 / 08</div>
+      </section>
+    </div>
+
+    <script>
+      (function () {
+        var tl = gsap.timeline({ paused: true });
+        tl.to({}, { duration: 64 });
+        window.__timelines["deck"] = tl;
+        var rootTl = tl;
+
+        var scenes = [
+          { id: "scene-cover", start: 0, end: 8 },
+          { id: "scene-hook", start: 8, end: 16 },
+          { id: "scene-problem", start: 16, end: 24 },
+          { id: "scene-cihubs", start: 24, end: 32 },
+          { id: "scene-ruta", start: 32, end: 40 },
+          { id: "scene-acompanamiento", start: 40, end: 48 },
+          { id: "scene-invenio", start: 48, end: 56 },
+          { id: "scene-cta", start: 56, end: 64 }
+        ];
+        var lastActiveId = null;
+
+        var fragments = [
+          { time: 35.0, id: "ruta-s2", revealed: false },
+          { time: 38.0, id: "ruta-s3", revealed: false },
+          { time: 43.0, id: "acomp-s2", revealed: false },
+          { time: 46.0, id: "acomp-s3", revealed: false }
+        ];
+
+        function fireEntrance(sceneEl) {
+          var animEls = sceneEl.querySelectorAll("[data-anim]");
+          if (!animEls.length) return;
+          gsap.from(animEls, {
+            opacity: 0, y: 28, duration: 0.4,
+            stagger: 0.07, ease: "power2.out", overwrite: true
+          });
+        }
+
+        function revealFragment(id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          gsap.fromTo(el,
+            { opacity: 0, x: -24 },
+            { opacity: 1, x: 0, duration: 0.35, ease: "power2.out", overwrite: true });
+        }
+
+        function resetFragments() {
+          for (var f = 0; f < fragments.length; f++) {
+            fragments[f].revealed = false;
+          }
+          ["ruta-s2", "ruta-s3", "acomp-s2", "acomp-s3"].forEach(function (id) {
+            var pEl = document.getElementById(id);
+            if (pEl) gsap.set(pEl, { opacity: 0, clearProps: "transform" });
+          });
+        }
+
+        function updateVisibility(t) {
+          for (var i = 0; i < scenes.length; i++) {
+            var s = scenes[i];
+            var el = document.getElementById(s.id);
+            if (!el) continue;
+            var active = t >= s.start && t < s.end;
+            el.style.opacity = active ? "1" : "0";
+            el.style.visibility = active ? "visible" : "hidden";
+            el.style.pointerEvents = active ? "auto" : "none";
+            if (active && lastActiveId !== s.id) {
+              lastActiveId = s.id;
+              resetFragments();
+              fireEntrance(el);
+            }
+          }
+          for (var g = 0; g < fragments.length; g++) {
+            if (!fragments[g].revealed && t >= fragments[g].time) {
+              fragments[g].revealed = true;
+              revealFragment(fragments[g].id);
+            }
+          }
+        }
+
+        window.__hfSetTime = updateVisibility;
+        updateVisibility(0);
+
+        var root = rootTl;
+        if (root) {
+          root.eventCallback("onUpdate", function () {
+            updateVisibility(root.time());
+          });
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        var scenes = [
+          { id: "cover", start: 0, duration: 8 },
+          { id: "hook", start: 8, duration: 8 },
+          { id: "problem", start: 16, duration: 8 },
+          { id: "cihubs", start: 24, duration: 8 },
+          { id: "ruta", start: 32, duration: 8 },
+          { id: "acompanamiento", start: 40, duration: 8 },
+          { id: "invenio", start: 48, duration: 8 },
+          { id: "cta", start: 56, duration: 8 }
+        ];
+        function postTimeline() {
+          parent.postMessage(
+            {
+              source: "hf-preview",
+              type: "timeline",
+              durationInFrames: 64 * 30,
+              scenes: scenes
+            },
+            "*"
+          );
+        }
+        if (document.readyState === "complete") {
+          setTimeout(postTimeline, 300);
+        } else {
+          window.addEventListener("load", function () {
+            setTimeout(postTimeline, 300);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

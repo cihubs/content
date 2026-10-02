@@ -1,5 +1,5 @@
 ---
-title: PROGRAMA 5: Brazo comercial para centros generadores de conocimiento
+title: "PROGRAMA 5: Brazo comercial para centros generadores de conocimiento"
 subtitle: Nuestro programa de implementación de plataformas de comercialización para entidades académicas y de investigación y desarrollo tiene como propósito articular su vinculación con pymes y startups locales e internacionales de base científica y tecnológica, así como con empresas multinacionales, académicos, otras universidades y centros de investigación y desarrollo, emprendedores y expertos temáticos, para que se transfiera tecnología y conocimiento y se aplique dicho nuevo conocimiento resultante de la investigación científica y el desarrollo tecnológico en la producción de bienes y servicios de valor.
 description: |
   Dentro de los servicios provistos por entidades académicas y de investigación y desarrollo al tejido empresarial y académico se encuentran los siguientes:

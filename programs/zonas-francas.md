@@ -1,5 +1,5 @@
 ---
-title: PROGRAMA 2: Zonas Francas – Parques Científicos y Tecnológicos
+title: "PROGRAMA 2: Zonas Francas – Parques Científicos y Tecnológicos"
 subtitle: Un parque científico y tecnológico es una organización administrada por profesionales especializados cuyo objetivo es aumentar la riqueza de la comunidad, promoviendo una cultura de innovación y la competitividad de las empresas e instituciones generadoras de conocimiento instaladas en el parque o asociadas a él.
 description: |
   El fortalecimiento de zonas francas para que operen como Parques Científicos y Tecnológicos pasa por implementar cinco funciones claves de operación en las zonas francas; que el parque:

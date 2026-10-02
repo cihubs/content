@@ -1,5 +1,5 @@
 ---
-title: PROGRAMA 4: Ciudades Científicas y Tecnológicas
+title: "PROGRAMA 4: Ciudades Científicas y Tecnológicas"
 subtitle: Una ciudad científica y tecnológica es aquella donde las entidades académicas y las empresas radicadas en ella realizan activamente labores de investigación y desarrollo alrededor de sectores estratégicos de conocimiento, y donde constantemente se incuban nuevas empresas de base tecnológica producto de esta investigación y desarrollo.
 description: |
   La conversión de gobiernos locales hacia ciudades científicas y tecnológicas se implementa en un programa de cinco etapas:

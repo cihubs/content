@@ -2,7 +2,7 @@
 title: Programa Inmersión
 subtitle: Una vez evidenciado el valor agregado de nuestra red de aliados, en esta segunda etapa formamos con nuestro cliente una serie de alianzas y proyectos estratégicos para llevar a cabo la implementación de los tres objetivos planteados en nuestra propuesta de valor.
 components:
-  - title: El Programa 1: Generación de nuevos negocios
+  - title: "El Programa 1: Generación de nuevos negocios"
     content: La expansión de nuestro cliente al incursionar fuera de su casa matriz le representa una oportunidad estratégica en la medida en que los recursos, el talento y el capital al que CIHubs le brinda acceso a través de sus aliados le generen nuevas líneas de negocio en nuevos mercados para lograr un crecimiento diversificado basado en capacidades de investigación y desarrollo de clase mundial.
     list: |
       ## Programa 1.1
@@ -31,7 +31,7 @@ components:
       - Desarrollar proyectos con propiedad intelectual patentada.
       - Formar cooperativas de startups
       - CIHubs le permite a su startup impactar radicalmente la capacidad de ejecutar innovación fuera de su casa matriz.
-  - title: El Programa 2: Conformación de equipos de talento humano especializado
+  - title: "El Programa 2: Conformación de equipos de talento humano especializado"
     content: Nos enfocamos en crear conocimiento con talento humano especializado y certificado que le permita a nuestro cliente agregar valor a sus productos en los diversos mercados y negocios a incursionar.
     list: |
       ## Programa 2.1
@@ -55,7 +55,7 @@ components:
       ## Programa 2.3
       Planificamos el crecimiento en la demanda de talento humano por parte de nuestro cliente a través de la implementación de expedientes digitales de perfiles de recurso humano actual y futuro a requerir para operar, investigar y crecer.
       - Perfiles de recurso humano.
-  - title: Programa 3: Consecución de grants y capital para el crecimiento
+  - title: "Programa 3: Consecución de grants y capital para el crecimiento"
     content: Conectamos a la startup/SME con nuestros aliados internacionales que proveen capital fresco a empresas de alta tecnología con un rumbo estratégico visionario y con el talento humano necesario para su crecimiento internacional.
     list: |
       ## Programa 3.1

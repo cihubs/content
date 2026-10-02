@@ -1,5 +1,5 @@
 ---
-title: PROGRAMA 3: Cadenas de valor globales
+title: "PROGRAMA 3: Cadenas de valor globales"
 subtitle: Nuestro programa de incorporación de cadenas de valor locales a cadenas de valor globales tiene como objetivo apoyar a la micro, pequeña y mediana empresa a encadenarse con las cadenas de valor nacionales e internacionales de empresas tractoras dentro y fuera de zonas francas como proveedores de insumos especializados, diferenciados con base en la investigación científica y el desarrollo tecnológico.
 description: |
   El apoyo para el encadenamiento de la micro, pequeña y mediana empresa con las cadenas de valor locales e internacionales de empresas dentro y fuera de zonas francas como proveedores de insumos especializados se puede materializar a través de:

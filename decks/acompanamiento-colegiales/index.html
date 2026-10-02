@@ -40,50 +40,65 @@
       </script>
     </hyperframes-slideshow>
     <script>
-      // Deep-link: ?slide=N (1-based) or ?t=seconds. Uses the slideshow
-      // controller when available (keeps nav counter in sync), falls back
-      // to seeking the composition iframe directly (same origin).
+      // Deep-link: ?slide=N (1-based) or ?t=seconds. The player initializes
+      // asynchronously (composition timeline arrives after iframe load), so a
+      // one-shot seek can be overwritten by init. This loop re-seeks until the
+      // target scene is actually visible (or 8s pass). Prefers the slideshow
+      // controller (keeps nav counter in sync), falls back to the iframe.
       (function () {
         var m = /[?&](?:slide|t)=([^&]+)/.exec(location.search);
         if (!m) return;
+        var SCENES = ["cover", "hook", "problem", "cihubs", "ruta", "descubrimiento", "acompanamiento", "puerta", "call-to-action"];
         var isSlide = location.search.indexOf("slide=") !== -1;
-        var n = parseInt(decodeURIComponent(m[1]), 10);
-        var time;
+        var idx, time;
         if (isSlide) {
-          if (!(n >= 1 && n <= 9)) return;
-          time = (n - 1) * 8 + 0.01;
+          var n = parseInt(decodeURIComponent(m[1]), 10);
+          if (!(n >= 1 && n <= SCENES.length)) return;
+          idx = n - 1;
+          time = idx * 8 + 0.01;
         } else {
           time = parseFloat(m[1]);
           if (!isFinite(time) || time < 0) return;
-          n = Math.floor(time / 8) + 1;
+          idx = Math.min(Math.floor(time / 8), SCENES.length - 1);
         }
-        var tries = 0;
-        var timer = setInterval(function () {
-          tries++;
-          var done = false;
+        var targetId = "scene-" + SCENES[idx];
+        function frameDoc() {
+          try {
+            var player = document.querySelector("hyperframes-player");
+            var frame = player && player.shadowRoot && player.shadowRoot.querySelector("iframe");
+            return frame && frame.contentDocument;
+          } catch (e) { return null; }
+        }
+        function isActive() {
+          var d = frameDoc();
+          if (!d) return false;
+          var el = d.getElementById(targetId);
+          if (!el) return false;
+          var cs = el.ownerDocument.defaultView.getComputedStyle(el);
+          return cs.visibility === "visible" && parseFloat(cs.opacity) > 0.5;
+        }
+        function seek() {
           try {
             var show = document.querySelector("hyperframes-slideshow");
             if (show && show.controller && show.controller.goToSlide) {
-              show.controller.goToSlide(n - 1);
-              done = true;
+              show.controller.goToSlide(idx);
+              return;
             }
           } catch (e) {}
-          if (!done) {
-            try {
-              var player = document.querySelector("hyperframes-player");
-              var frame =
-                player &&
-                player.shadowRoot &&
-                player.shadowRoot.querySelector("iframe");
-              var w = frame && frame.contentWindow;
-              if (w && w.__hfSetTime) {
-                w.__hfSetTime(time);
-                done = true;
-              }
-            } catch (e2) {}
+          try {
+            var d = frameDoc();
+            var w = d && d.defaultView;
+            if (w && w.__hfSetTime) w.__hfSetTime(time);
+          } catch (e2) {}
+        }
+        var deadline = Date.now() + 8000;
+        var timer = setInterval(function () {
+          if (isActive() || Date.now() > deadline) {
+            clearInterval(timer);
+            return;
           }
-          if (done || tries > 100) clearInterval(timer);
-        }, 150);
+          seek();
+        }, 250);
       })();
     </script>
   </body>

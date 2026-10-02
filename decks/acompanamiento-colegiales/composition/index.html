@@ -129,6 +129,50 @@
         border-top: 10px solid #fec503;
         padding-top: 28px;
       }
+      .mgrid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 20px;
+        margin-top: 48px;
+      }
+      .mgroup {
+        display: grid;
+        grid-template-columns: subgrid;
+      }
+      #acomp-s1 { grid-column: span 2; }
+      #acomp-s2 { grid-column: span 3; }
+      #acomp-s3 { grid-column: span 2; }
+      .mcol {
+        background: #2a4289;
+        border-radius: 12px;
+        border-top: 8px solid #fec503;
+        padding: 26px 18px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 22px;
+        text-align: center;
+      }
+      .mitem-top {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 1.3;
+        color: #ffffff;
+      }
+      .mdiv {
+        height: 2px;
+        background: rgba(255, 255, 255, 0.3);
+        margin: 0 12px;
+      }
+      .mitem-sub {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.3;
+        color: #f7f9fc;
+      }
       .step-num {
         font-family: "Poppins", sans-serif;
         font-weight: 700;
@@ -265,19 +309,48 @@
       <section id="clip-acompanamiento" class="clip" data-start="40" data-duration="8" data-track-index="1">
         <div class="pad">
           <p class="kicker" data-anim id="acomp-kicker">Programa de acompañamiento</p>
-          <h1 class="headline" data-anim id="acomp-headline">No caminas la ruta <span class="accent">en soledad</span></h1>
-          <div class="steps">
-            <div class="step" data-anim id="acomp-s1" style="border-top-color: #ffffff">
-              <div class="step-title" style="color: #ffffff">Incubación</div>
-              <div class="step-desc" style="color: #f7f9fc">De la idea al primer prototipo validado.</div>
+          <h1 class="headline" data-anim id="acomp-headline">Qué incluye el acompañamiento</h1>
+          <div class="mgrid">
+            <div class="mgroup" data-anim id="acomp-s1">
+              <div class="mcol">
+                <p class="mitem-top">Qué problema resuelves</p>
+                <div class="mdiv"></div>
+                <p class="mitem-sub">En qué negocio estás</p>
+              </div>
+              <div class="mcol">
+                <p class="mitem-top">Tu digital twin startup</p>
+                <div class="mdiv"></div>
+                <p class="mitem-sub">Tu propuesta de valor</p>
+              </div>
             </div>
-            <div class="step" data-anim id="acomp-s2" style="border-top-color: #ffffff">
-              <div class="step-title" style="color: #ffffff">Aceleración</div>
-              <div class="step-desc" style="color: #f7f9fc">Del prototipo al mercado que paga.</div>
+            <div class="mgroup" data-anim id="acomp-s2">
+              <div class="mcol">
+                <p class="mitem-top">Tu perfil corporativo</p>
+                <div class="mdiv"></div>
+                <p class="mitem-sub">El perfil de tu equipo</p>
+              </div>
+              <div class="mcol">
+                <p class="mitem-top">El impacto de la IA en tu solución</p>
+                <div class="mdiv"></div>
+                <p class="mitem-sub">Tu Minimum Evolvable Product</p>
+              </div>
+              <div class="mcol">
+                <p class="mitem-top">Tu pitch de ventas</p>
+                <div class="mdiv"></div>
+                <p class="mitem-sub">Tu Client Business Case</p>
+              </div>
             </div>
-            <div class="step" data-anim id="acomp-s3" style="border-top-color: #ffffff">
-              <div class="step-title" style="color: #ffffff">Conexiones</div>
-              <div class="step-desc" style="color: #f7f9fc">Ecosistema, mentores e inversionistas.</div>
+            <div class="mgroup" data-anim id="acomp-s3">
+              <div class="mcol">
+                <p class="mitem-top">Tu frase diferenciadora</p>
+                <div class="mdiv"></div>
+                <p class="mitem-sub">Tu Live Demo</p>
+              </div>
+              <div class="mcol">
+                <p class="mitem-top">Retroalimentación de expertos</p>
+                <div class="mdiv"></div>
+                <p class="mitem-sub">Selección del road show internacional</p>
+              </div>
             </div>
           </div>
         </div>

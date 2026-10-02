@@ -250,6 +250,40 @@
         color: #4a6fa5;
       }
       .slide-dark .fnote { color: #b8d4ea; }
+      .headline, .dtitle { text-wrap: balance; }
+      .body, .step-desc, .mitem-top, .mitem-sub, .dsub, .dbullets li { text-wrap: pretty; }
+      .bigidea {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #4a6fa5;
+        margin-top: 20px;
+      }
+      .slide-dark .bigidea { color: #fec503; }
+      .blist { list-style: none; margin-top: 32px; }
+      .blist li {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 1.35;
+        color: #f7f9fc;
+        padding-left: 40px;
+        position: relative;
+        margin-top: 16px;
+        text-wrap: pretty;
+      }
+      .blist li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 16px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #fec503;
+      }
       .step-num {
         font-family: "Poppins", sans-serif;
         font-weight: 700;
@@ -299,7 +333,7 @@
         <img class="watermark" src="media/bg-01-cover.jpg" alt="" />
         <div class="pad">
           <p class="kicker" data-anim id="cover-kicker">CIHUBS · Webinar</p>
-          <h1 class="headline" data-anim id="cover-headline">Tu futuro como<br />emprendedor en tecnología</h1>
+          <h1 class="headline" data-anim id="cover-headline">Tu <span class="accent">futuro</span> como<br />emprendedor en tecnología</h1>
           <p class="body" data-anim id="cover-body">De la idea de hoy a la empresa tecnológica de mañana.</p>
         </div>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
@@ -329,7 +363,7 @@
         <img class="watermark" src="media/bg-03-problem.jpg" alt="" />
         <div class="pad">
           <p class="kicker" data-anim id="problem-kicker">El problema</p>
-          <h1 class="headline" data-anim id="problem-headline">Las buenas ideas mueren<br />cuando no hay ruta al mercado</h1>
+          <h1 class="headline" data-anim id="problem-headline">Las buenas ideas mueren<br />cuando no hay <span class="light">ruta al mercado</span></h1>
           <p class="body" data-anim id="problem-body">Sin problema real de mercado y sin diferenciador tecnológico, ni el mejor proyecto despega.</p>
         </div>
         <img class="brand-logo" src="media/logo.svg" alt="CIHUBS" />
@@ -344,7 +378,12 @@
         <div class="pad">
           <p class="kicker" data-anim id="cihubs-kicker">Quiénes somos</p>
           <h1 class="headline" data-anim id="cihubs-headline">Dinamizamos el ecosistema<br />de innovación <span class="accent">de Costa Rica</span></h1>
-          <p class="body" data-anim id="cihubs-body">Conectamos generadores y usuarios de conocimiento en proyectos conjuntos e incubación de base tecnológica.</p>
+          <p class="bigidea" data-anim>Convertimos eventos en rutas</p>
+          <ul class="blist" data-anim>
+            <li>Generadores y usuarios de conocimiento, conectados</li>
+            <li>Proyectos conjuntos universidad-empresa</li>
+            <li>Incubación de base tecnológica</li>
+          </ul>
         </div>
         <img class="brand-logo" src="media/logo-invertido.svg" alt="CIHUBS" />
         <div class="slideno">04 / 10</div>
@@ -358,7 +397,8 @@
         <img class="watermark" src="media/bg-05-ruta.jpg" alt="" />
         <div class="pad">
           <p class="kicker" data-anim id="ruta-kicker">Nuestra metodología</p>
-          <h1 class="headline" data-anim id="ruta-headline">Tres pasos, cero humo</h1>
+          <h1 class="headline" data-anim id="ruta-headline">Tres pasos, <span class="light">cero humo</span></h1>
+          <p class="bigidea" data-anim>Problema, diferencia, producto</p>
           <div class="steps">
             <div class="step" data-anim id="ruta-s1">
               <div class="step-num">1</div>
@@ -388,7 +428,8 @@
       <section id="clip-acompanamiento" class="clip" data-start="40" data-duration="8" data-track-index="1">
         <div class="pad">
           <p class="kicker" data-anim id="acomp-kicker">Programa de acompañamiento</p>
-          <h1 class="headline" data-anim id="acomp-headline">Qué incluye el acompañamiento</h1>
+          <h1 class="headline" data-anim id="acomp-headline">Qué incluye el <span class="accent">acompañamiento</span></h1>
+          <p class="bigidea" data-anim>Catorce piezas, una ruta</p>
           <div class="mgrid">
             <div class="mgroup" data-anim id="acomp-s1">
               <div class="mcol">
@@ -445,7 +486,8 @@
         <img class="watermark" src="media/bg-07-ecosistema.jpg" alt="" />
         <div class="pad">
           <p class="kicker" data-anim id="eco-kicker">El ecosistema te espera</p>
-          <h1 class="headline" data-anim id="eco-headline">Cuando crezcas, esto te espera</h1>
+          <h1 class="headline" data-anim id="eco-headline">Cuando crezcas, <span class="light">esto te espera</span></h1>
+          <p class="bigidea" data-anim>Cinco puertas al futuro</p>
           <div class="pgrid">
             <div class="mcol" data-anim>
               <p class="mitem-top">Soft Landing</p>
@@ -487,7 +529,8 @@
         <img class="watermark" src="media/bg-08-puerta.jpg" alt="" />
         <div class="pad">
           <p class="kicker" data-anim id="puerta-kicker">Tu puerta de entrada</p>
-          <h1 class="headline" data-anim id="puerta-headline">Empieza por Discovery e Inmersión</h1>
+          <h1 class="headline" data-anim id="puerta-headline">Empieza por <span class="accent">Discovery e Inmersión</span></h1>
+          <p class="bigidea" data-anim>La puerta está abierta</p>
           <div class="dgrid">
             <div class="dcard" data-anim>
               <p class="dtag">Etapa I · 3 meses</p>
@@ -522,7 +565,7 @@
         <img class="watermark" src="media/bg-09-invenio.jpg" alt="" />
         <div class="pad">
           <p class="kicker" data-anim id="invenio-kicker">Tu vitrina</p>
-          <h1 class="headline" data-anim id="invenio-headline">Nos vemos en el<br />Invenio Fest 2026</h1>
+          <h1 class="headline" data-anim id="invenio-headline">Nos vemos en el<br /><span class="light">Invenio Fest 2026</span></h1>
           <p class="body" data-anim id="invenio-body">Jueves 24 de septiembre · Universidad Invenio, Cañas, Guanacaste. Lleva tu emprendimiento y te ayudamos a prepararlo.</p>
         </div>
         <img class="brand-logo" src="media/logo.svg" alt="CIHUBS" />
